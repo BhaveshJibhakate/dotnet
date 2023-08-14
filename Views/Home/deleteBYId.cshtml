@@ -1,0 +1,33 @@
+﻿@using BOL;
+
+@{
+    ViewData["Title"] = "deleteBYId";
+}
+
+<h1>Delate employee</h1>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 40%;
+        border: 1px solid #ccc; /* Add a solid border with a color of your choice */
+    }
+
+    th, td {
+        border: 1px solid #ccc; /* Add a solid border with a color of your choice */
+        padding: 8px;
+        text-align: left;
+    }
+</style>
+<form action="/Home/deleteBYId" method="post">
+    <table>
+       <tr>
+           <td>Please Enter valid EmpId : </td>
+           <td><input type="text" id="id" name="id" required /></td>
+       </tr>
+       <tr>
+           <td></td>
+           <td><button type="submit" id="btn" name="btn">Delete Employee</button></td>
+       </tr>
+    </table>
+</form>
+

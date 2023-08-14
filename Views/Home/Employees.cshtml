@@ -1,0 +1,48 @@
+﻿@using BOL;
+
+@{
+    ViewData["Title"] = "Employees";
+}
+
+<h1>Employees List</h1>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 40%;
+        border: 1px solid #ccc; /* Add a solid border with a color of your choice */
+    }
+
+    th, td {
+        border: 1px solid #ccc; /* Add a solid border with a color of your choice */
+        padding: 8px;
+        text-align: left;
+    }
+        
+</style>
+<table border="2">
+
+    <thead>
+       <tr>
+           <th>ID</th>
+           <th>FIRSTNAME</th>
+           <th>LASTNAME</th>
+           <th>DEPARTMENT</th>
+           <th>JOINDATE</th>
+       </tr>
+    </thead>
+    <tbody>
+        @{
+
+            @foreach (Employee E in ViewBag.Employees)
+            {
+               <tr>
+               <td>@E.ID</td>
+               <td>@E.FIRSTNAME</td>
+               <td>@E.LASTNAME</td>
+               <td>@E.DEPARTMENT</td>
+               <td>@E.JOINDATE</td>
+               </tr> 
+            }
+        }
+    </tbody>
+</table>
